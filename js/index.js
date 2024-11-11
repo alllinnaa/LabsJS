@@ -1,3 +1,4 @@
+//Лаба 2 (наліпаюче меню)
 let headerEl = document.getElementById("header") // Зберігає елемент з ID "header" у змінну headerEl
 
 // Додає обробник події "scroll" до вікна браузера
@@ -9,6 +10,8 @@ window.addEventListener("scroll", function() {
         headerEl.classList.remove("fixed") // Видаляє клас "fixed" з елемента headerEl
     }
 })
+
+//Лаба 3 (меню для мобільних пристроїв, кнопка для повернення на початок сторінки)
 
 // Отримуємо елемент кнопки для показу меню за ID "show-menu"
 let showMenu = document.querySelector("#show-menu"); 
@@ -57,3 +60,68 @@ upBtn.addEventListener("click", function () {
         behavior: "smooth" // Плавний ефект прокрутки
     });
 });
+
+
+
+// Лаба 4 (проміси)
+
+// Масив URL для зображень галереї
+const imgURLArr = [
+    'images/make-up.jpg',
+    'images/manikyur.jpg',
+    'images/pricheska.jpg',
+    'images/resnizi.jpg',
+    'images/strizka.jpg'
+];
+
+// Масив для збереження промісів, які відображають стан завантаження кожного зображення
+const promiseArr = [];
+
+// Отримуємо посилання на галерею та спінер
+const gallery = document.querySelector('.gallery');
+const spinner = document.querySelector('.loader-dots');
+
+// Показуємо спінер перед початком завантаження зображень
+spinner.style.display = 'flex';
+
+// Ітеруємо по масиву URL-адрес, створюючи проміси для кожного зображення
+for (const url of imgURLArr) { 
+    const promise = new Promise(function(resolve, reject) { 
+        // Створюємо новий елемент зображення
+        const img = document.createElement('img');
+        img.classList.add("picture", "hidden"); // Додаємо класи для стилізації
+        img.src = url; // Встановлюємо src зображення
+
+        // Додаємо обробник події "load" для відстеження завершення завантаження зображення
+        img.addEventListener("load", function() {
+            resolve(); // Викликаємо resolve, якщо зображення завантажилося успішно
+        });
+
+        // Додаємо обробник події "error" для відстеження помилок завантаження
+        img.addEventListener("error", function() {
+            reject(); // Викликаємо reject, якщо завантаження зображення завершилося помилкою
+        });
+
+        // Додаємо зображення до галереї
+        gallery.appendChild(img);
+    });
+
+    // Додаємо кожен проміс у масив промісів
+    promiseArr.push(promise);
+}
+
+// Використовуємо Promise.all для обробки всіх промісів одночасно
+Promise.all(promiseArr).then(
+    function() { 
+        // Якщо всі зображення завантажилися успішно, показуємо їх у галереї
+        document.querySelectorAll('.picture').forEach(img => {
+            img.classList.remove("hidden"); // Видаляємо клас "hidden"
+            img.classList.add("show"); // Додаємо клас "show" для плавного відображення
+        });
+        spinner.style.display = "none"; // Приховуємо спінер після завершення завантаження
+    },
+    function() { 
+        // Якщо завантаження будь-якого зображення завершилося помилкою, виводимо повідомлення
+        alert("Помилка завантаження");
+    }
+);
