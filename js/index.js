@@ -125,3 +125,42 @@ Promise.all(promiseArr).then(
         alert("Помилка завантаження");
     }
 );
+
+// Лаба 5 (слайдер)
+
+/* Встановлюємо стартовий індекс слайду за замовчуванням: */
+let slideIndex = 1;
+/* Викликаємо функцію, яка реалізована нижче: */
+showSlides(slideIndex);
+
+/* Збільшуємо індекс на 1 - показуємо наступний слайд: */
+function nextSlide() {
+    showSlides(slideIndex += 1);
+}
+
+/* Зменшуємо індекс на 1 – показуємо попередній слайд: */
+function previousSlide() {
+    showSlides(slideIndex -= 1);  
+}
+
+
+/* Функція перегортання: */
+function showSlides(n) {
+/* Звертаємось до елементів з назвою класу "item", тобто до картинок: */
+    let slides = document.getElementsByClassName("item");
+    
+/* Перевіряємо кількість слайдів: */
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+  
+/* Проходимо по кожному слайду в циклі for: */
+    for (let slide of slides) {
+        slide.style.display = "none";
+    }
+    /* Робимо елемент блоковим: */
+    slides[slideIndex - 1].style.display = "block";    
+}
