@@ -88,7 +88,7 @@ header > .menu {
     font-size: 15px; /* Розмір шрифту для заголовка h3 - 15 пікселів */
     text-transform: uppercase; /* Перетворює текст на великі літери */
     font-weight: 500; /* Товщина шрифту - 500 (напівжирний) */
-    color: #ccc; 
+    color: #909090; 
 }
 
 .full-page button, .bg-fixed button {
