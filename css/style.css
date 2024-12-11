@@ -132,25 +132,6 @@ header > .menu {
     margin-bottom: 0; /* Прибираємо відступ знизу у останнього параграфа */
 }
 
-.salon-image-section {
-    display: flex; /* Вирівнювання секції */
-    justify-content: center; /* Центрування зображення */
-    margin: 50px 0; /* Відступи зверху та знизу */
-}
-
-.salon-image-section img {
-    width: 100%; /* Зображення на всю ширину контейнера */
-    max-width: 1200px; /* Обмежуємо максимальну ширину */
-    height: auto; /* Зберігаємо пропорції зображення */
-    border-radius: 10px; /* Додаємо округлення кутів */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Тінь для покращення візуального вигляду */
-    transition: transform 0.3s ease; /* Додаємо плавну анімацію при наведенні */
-}
-
-.salon-image-section img:hover {
-    transform: scale(1.05); /* Ефект збільшення при наведенні */
-}
-
 
 .features {
     display: flex; /* Відображення елементів у рядок (flex-контейнер) */
@@ -461,6 +442,83 @@ footer .social div {
     }
 }
 
+/*Лаба 7 - делегування подій*/
+
+/* Загальні стилі для секції */
+.gallery-salon {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+/* Заголовок */
+.salon-title {
+    font-size: 2.3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Контейнер великого зображення */
+#salon-largeImageContainer {
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Велике зображення */
+#salon-largeImage {
+    width: 1200px; /* Фіксована ширина */
+    height: 600px; /* Фіксована висота */
+    object-fit: cover; /* Забезпечує обрізання без спотворення */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#salon-largeImage:hover {
+    transform: scale(1.05); /* Збільшення при наведенні */
+}
+
+/* Текст під великою картинкою */
+#salon-imageTitle {
+    margin-top: 15px;
+    font-size: 1.4em;
+    color: #666;
+    font-weight: bold;
+}
+
+/* Галерея */
+.salon-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Елементи галереї */
+.salon-gallery a {
+    display: block;
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Зображення в галереї */
+.salon-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ефекти при наведенні */
+.salon-gallery a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
 
 
 

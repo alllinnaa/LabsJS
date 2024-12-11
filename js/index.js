@@ -275,3 +275,31 @@ socialIcons.forEach(icon => {
     });
 });
 
+
+//Лаба 7 - делегування подій
+
+// Обробка кліків у галереї салону
+document.getElementById('salon-gallery').onclick = function(event) {
+    // Знаходимо найближче посилання, на яке був клік
+    const link = event.target.closest('a');
+
+    // Якщо клік не на посиланні, нічого не робимо
+    if (!link) return;
+
+    // Відміна стандартної поведінки (перехід за посиланням)
+    event.preventDefault();
+
+    // Оновлюємо велике зображення та заголовок
+    updateSalonLargeImage(link.href, link.title);
+};
+
+// Функція для оновлення великого зображення та заголовка в галереї салону
+function updateSalonLargeImage(src, title) {
+    const largeImage = document.getElementById('salon-largeImage');
+    const imageTitle = document.getElementById('salon-imageTitle');
+
+    largeImage.src = src;
+    largeImage.alt = title;
+    imageTitle.textContent = title;
+}
+
