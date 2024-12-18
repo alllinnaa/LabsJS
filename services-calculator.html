@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services and Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <span class="logo">Hollywood</span>
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="#">About us</a>
+            <a href="services.html">Services</a>
+            <a href="#">Our team</a>
+        </div>
+    </header>
+
+    <section class="full-page">
+        <div class="content">
+            <h1>Our Beauty Services</h1>
+            <h3>Choose the best services for you</h3>
+        </div>
+    </section>
+
+    <!-- Список послуг -->
+    <section class="service-list">
+        <div class="service">
+            <h4>Haircut</h4>
+            <p>Price: $30</p>
+        </div>
+        <div class="service">
+            <h4>Hair Coloring</h4>
+            <p>Price: $50</p>
+        </div>
+        <div class="service">
+            <h4>Manicure</h4>
+            <p>Price: $40</p>
+        </div>
+        <div class="service">
+            <h4>Pedicure</h4>
+            <p>Price: $45</p>
+        </div>
+        <div class="service">
+            <h4>Massage</h4>
+            <p>Price: $60</p>
+        </div>
+        <div class="service">
+            <h4>Makeup</h4>
+            <p>Price: $70</p>
+        </div>
+        <div class="service">
+            <h4>Eyebrow Shaping</h4>
+            <p>Price: $20</p>
+        </div>
+        <div class="service">
+            <h4>Lash Extensions</h4>
+            <p>Price: $35</p>
+        </div>
+        <div class="service">
+            <h4>Facial</h4>
+            <p>Price: $80</p>
+        </div>
+        <div class="service">
+            <h4>Waxing</h4>
+            <p>Price: $25</p>
+        </div>
+        <div class="service">
+            <h4>Hair Treatment</h4>
+            <p>Price: $50</p>
+        </div>
+        <div class="service">
+            <h4>Body Scrub</h4>
+            <p>Price: $55</p>
+        </div>
+        <div class="service">
+            <h4>Bridal Makeup</h4>
+            <p>Price: $100</p>
+        </div>
+        <!-- Додати ще більше послуг, якщо потрібно -->
+    </section>
+
+    <div class="button-container">
+        <button id="open-calculator" class="calculator-button">Calculate Total Price</button>
+    </div>
+
+    <!-- Модальне вікно -->
+    <div id="calculator-modal" class="custom-modal">
+        <div class="modal-content">
+            <button class="close-button" id="close-modal">✖</button>
+            <h2>Service Calculator</h2>
+            <form id="calculator-form">
+                <div class="calculator-services">
+                </div>
+                <input type="text" id="phone-number" placeholder="Enter phone number">
+                <input type="text" id="promo-code" placeholder="Enter promo code">
+                <button type="button" id="calculate-price">Calculate</button>
+            </form>
+            <div id="calculation-result"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="contacts">
+            <p>Contact us for any questions!</p>
+            <p>Email: hair@gmail.com</p>
+            <p>Phone: 123-456-7890</p>
+        </div>
+    </footer>
+
+    <script src="js/services-calculator.js"></script>
+</body>
+
+</html>

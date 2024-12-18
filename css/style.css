@@ -183,6 +183,9 @@ footer .contacts {
     text-transform: uppercase;
     text-align: center;
     color: #817e7e;
+    line-height: 25px; /* Висота рядка дорівнює висоті контейнера */
+    height: 100px;
+    margin: 0 auto;
 }
 
 footer .up-btn, 
@@ -442,83 +445,272 @@ footer .social div {
     }
 }
 
-/*Лаба 7 - делегування подій*/
+/* Лаба 7 - Делегування подій */
 
 /* Загальні стилі для секції */
 .gallery-salon {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #f9f9f9;
+    text-align: center; /* Вирівнювання тексту по центру */
+    padding: 40px 20px; /* Внутрішні відступи секції */
+    background-color: #f9f9f9; /* Фон секції світло-сірий */
 }
 
-/* Заголовок */
+/* Стилі для заголовка галереї */
 .salon-title {
-    font-size: 2.3em;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 2.3em; /* Розмір шрифту заголовка */
+    font-weight: bold; /* Жирний текст */
+    margin-bottom: 20px; /* Відступ знизу від заголовка */
+    color: #333; /* Колір тексту (темно-сірий) */
 }
 
-/* Контейнер великого зображення */
+/* Контейнер для великого зображення */
 #salon-largeImageContainer {
-    margin: 40px auto;
-    text-align: center;
+    margin: 40px auto; /* Відступ зверху і знизу, вирівнювання по центру */
+    text-align: center; /* Центрування контенту всередині */
 }
 
-/* Велике зображення */
+/* Стилі для великого зображення */
 #salon-largeImage {
-    width: 1200px; /* Фіксована ширина */
-    height: 600px; /* Фіксована висота */
-    object-fit: cover; /* Забезпечує обрізання без спотворення */
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    width: 1200px; /* Фіксована ширина великого зображення */
+    height: 600px; /* Фіксована висота великого зображення */
+    object-fit: cover; /* Забезпечує збереження пропорцій з обрізанням */
+    border-radius: 10px; /* Закруглені кути */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Тінь навколо зображення */
+    transition: transform 0.3s ease; /* Плавний ефект трансформації */
 }
 
+/* Ефект при наведенні на велике зображення */
 #salon-largeImage:hover {
-    transform: scale(1.05); /* Збільшення при наведенні */
+    transform: scale(1.05); /* Збільшення зображення на 5% */
 }
 
-/* Текст під великою картинкою */
+/* Текстовий заголовок під великим зображенням */
 #salon-imageTitle {
-    margin-top: 15px;
-    font-size: 1.4em;
-    color: #666;
-    font-weight: bold;
+    margin-top: 15px; /* Відступ зверху */
+    font-size: 1.4em; /* Розмір шрифту */
+    color: #666; /* Світло-сірий колір тексту */
+    font-weight: bold; /* Жирний текст */
 }
 
-/* Галерея */
+/* Контейнер галереї з маленькими зображеннями */
 .salon-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
+    display: flex; /* Гнучке розташування елементів */
+    flex-wrap: wrap; /* Перенос елементів на новий рядок */
+    gap: 20px; /* Відступ між елементами */
+    justify-content: center; /* Центрування елементів у контейнері */
+    padding: 20px; /* Внутрішні відступи галереї */
 }
 
 /* Елементи галереї */
 .salon-gallery a {
-    display: block;
-    width: 200px;
-    height: 150px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block; /* Блокове відображення для посилань */
+    width: 200px; /* Фіксована ширина елемента */
+    height: 150px; /* Фіксована висота елемента */
+    border-radius: 10px; /* Закруглені кути */
+    overflow: hidden; /* Приховування вихідного вмісту за межі */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легка тінь навколо елемента */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавний перехід для ефектів */
 }
 
-/* Зображення в галереї */
+/* Стилі зображень у галереї */
 .salon-gallery img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* Ширина зображення дорівнює ширині контейнера */
+    height: 100%; /* Висота зображення дорівнює висоті контейнера */
+    object-fit: cover; /* Забезпечує обрізання без спотворення */
 }
 
-/* Ефекти при наведенні */
+/* Ефект при наведенні на елементи галереї */
 .salon-gallery a:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1); /* Збільшення елемента на 10% */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Збільшення тіні для акценту */
 }
+
+/*Лаба 8*/
+
+/* Контейнер для списку послуг */
+.service-list {
+    display: flex; /* Використовується Flexbox для розташування послуг у рядок */
+    flex-wrap: wrap; /* Дозволяє переносити послуги на новий рядок */
+    justify-content: center; /* Центрує послуги по горизонталі */
+    gap: 20px; /* Відстань між послугами */
+    margin: 20px auto; /* Відступи з усіх боків і центрування по горизонталі */
+    padding: 20px; /* Внутрішні відступи всередині контейнера */
+    background: linear-gradient(145deg, #fad4ec, #f3e7fb); /* Градієнтний фон */
+    border-radius: 15px; /* Закруглені кути для контейнера */
+}
+
+/* Оформлення кожної послуги */
+.service {
+    background: #fff; /* Білий фон для послуги */
+    padding: 15px; /* Внутрішні відступи */
+    border-radius: 10px; /* Закруглені кути */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тінь для створення об'єму */
+    text-align: center; /* Вирівнювання тексту по центру */
+    width: 200px; /* Фіксована ширина для кожної послуги */
+}
+
+/* Кнопка для відкриття калькулятора */
+.calculator-button {
+    background: #f5b0c5; /* Рожевий фон */
+    border: none; /* Видалення рамки */
+    padding: 15px 25px; /* Внутрішні відступи */
+    border-radius: 20px; /* Закруглені кути кнопки */
+    font-size: 18px; /* Розмір тексту */
+    cursor: pointer; /* Зміна курсора на вказівник при наведенні */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тінь для кнопки */
+    margin: 20px auto; /* Відступи та центрування кнопки */
+}
+
+/* Модальне вікно */
+/* Основний контейнер модального вікна */
+.custom-modal {
+    display: none; /* Ховає модальне вікно за замовчуванням */
+    position: fixed; /* Фіксоване позиціонування щодо екрану */
+    top: 50%; /* Центрування по вертикалі */
+    left: 50%; /* Центрування по горизонталі */
+    transform: translate(-50%, -50%); /* Точне позиціонування в центрі */
+    background: linear-gradient(145deg, #ffffff, #f7d5f5); /* Градієнтний фон */
+    padding: 20px; /* Внутрішні відступи */
+    border-radius: 20px; /* Закруглені кути */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Тінь для об'єму */
+    width: 90%; /* Ширина контейнера */
+    max-width: 500px; /* Максимальна ширина */
+    z-index: 1000; /* Забезпечує, що вікно поверх інших елементів */
+}
+
+/* Контент модального вікна */
+.modal-content {
+    text-align: center; /* Центрування всередині модального вікна */
+}
+
+
+/* Контейнер для кнопок */
+.button-container {
+    display: flex; /* Використовується Flexbox для вирівнювання кнопок */
+    justify-content: center; /* Центрує кнопки по горизонталі */
+    margin: 20px auto; /* Відступи та центрування */
+}
+
+/* Оформлення полів вводу */
+.input-field {
+    display: block; /* Блоковий елемент */
+    width: calc(100% - 40px); /* Ширина з урахуванням відступів */
+    margin: 10px auto; /* Відступи з усіх боків */
+    padding: 10px; /* Внутрішні відступи */
+    border: 1px solid #ddd; /* Тонка рамка */
+    border-radius: 10px; /* Закруглені кути */
+    font-size: 16px; /* Розмір тексту */
+}
+
+/* Група кнопок у модальному вікні */
+.button-group {
+    display: flex; /* Використовується Flexbox для розташування кнопок */
+    justify-content: space-around; /* Рівномірний розподіл кнопок */
+    margin-top: 15px; /* Відступ зверху */
+}
+
+
+
+/* Оформлення послуг у калькуляторі */
+/* Контейнер для послуг у стовпцях */
+.calculator-services {
+    display: flex; /* Використовується Flexbox для створення стовпців */
+    flex-wrap: wrap; /* Дозволяє послугам переноситись на новий рядок */
+    gap: 20px; /* Відстань між стовпцями та рядками */
+    justify-content: space-between; /* Рівномірний розподіл стовпців із простором між ними */
+    margin-top: 20px; /* Відступ зверху */
+}
+
+/* Стовпці */
+.calculator-column {
+    flex: 1; /* Стовпці автоматично займають рівну частину доступного простору */
+    min-width: 150px; /* Мінімальна ширина стовпця для забезпечення адаптивності */
+    max-width: 200px; /* Максимальна ширина стовпця */
+}
+
+/* Елементи послуг */
+.calculator-services label {
+    display: block; /* Розташовує кожну послугу у власному рядку */
+    margin: 10px 0; /* Відступи між послугами */
+    padding: 10px; /* Внутрішні відступи для зручності читання */
+    background: linear-gradient(145deg, #f7e7fb, #f5d5f5); /* Градієнтний фон для елементів */
+    border-radius: 10px; /* Закруглені кути елементів */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тінь для створення об'єму */
+    cursor: pointer; /* Вказівник змінюється на руку при наведенні */
+    font-size: 14px; /* Розмір тексту елементів */
+    font-weight: 500; /* Напівжирний текст */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Плавна анімація зміни кольору і масштабу */
+}
+
+/* Ефект наведення */
+.calculator-services label:hover {
+    background: linear-gradient(145deg, #fad4ec, #f3e7fb); /* Зміна фону при наведенні */
+    transform: scale(1.03); /* Легке збільшення елемента */
+}
+
+/* Оформлення кнопок */
+/* Закриваюча кнопка */
+.close-button {
+    background: none; /* Прозорий фон */
+    border: none; /* Видалення рамки */
+    font-size: 24px; /* Великий розмір тексту (хрестика) */
+    position: absolute; /* Фіксоване позиціонування всередині модального вікна */
+    top: 0px; /* Розташування у верхній частині */
+    right: 10px; /* Відступ від правого краю */
+    cursor: pointer; /* Вказівник змінюється на руку при наведенні */
+    z-index: 1001; /* Забезпечує, що кнопка знаходиться над іншими елементами */
+}
+
+/* Кнопки управління (розрахунок, очищення, закриття) */
+#calculate-price,
+#clear-form,
+#close-modal {
+    display: inline-block; /* Розташування кнопок в одному рядку */
+    background: linear-gradient(145deg, #fad4ec, #f3e7fb); /* Градієнтний фон кнопок */
+    border: none; /* Без рамки */
+    padding: 10px 20px; /* Внутрішні відступи для зручності */
+    border-radius: 10px; /* Закруглені кути кнопок */
+    font-size: 16px; /* Розмір тексту кнопок */
+    font-weight: bold; /* Жирний текст */
+    color: #e25d8c; /* Рожевий колір тексту */
+    cursor: pointer; /* Вказівник змінюється на руку при наведенні */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тінь для створення об'єму */
+    transition: all 0.3s ease; /* Плавний ефект переходу при наведенні */
+    margin: 10px; /* Відступи між кнопками */
+}
+
+/* Ефект наведення для кнопок */
+#calculate-price:hover,
+#clear-form:hover,
+#close-modal:hover {
+    background: linear-gradient(145deg, #a66e9f, #f2b0a0); /* Зміна кольору фону при наведенні */
+    transform: translateY(-2px); /* Підняття кнопки при наведенні */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Посилення тіні */
+}
+
+/* Оформлення результатів розрахунку */
+#calculation-result p {
+    font-size: 18px; /* Великий розмір тексту результатів */
+    margin: 10px 0; /* Відступи між рядками */
+    color: #5c005c; /* Темно-рожевий колір тексту */
+    font-weight: bold; /* Жирний текст */
+}
+
+/* Оформлення полів вводу */
+/* Поле для вводу телефону та промокоду */
+#phone-number,
+#promo-code {
+    display: block; /* Поля займають окремий рядок */
+    width: calc(100% - 40px); /* Ширина з урахуванням відступів */
+    margin: 10px auto; /* Центрування та відступи */
+    padding: 10px; /* Внутрішні відступи */
+    border: 1px solid #ddd; /* Тонка рамка */
+    border-radius: 10px; /* Закруглені кути */
+    font-size: 16px; /* Розмір тексту */
+}
+
+
+
+
 
 
 
